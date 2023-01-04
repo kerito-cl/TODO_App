@@ -12,7 +12,7 @@
 
           <div class="media-body">
             <div class="article-metadata">
-              <a class="mr-2" href="#">{{ post.status }}</a>
+              <a class="mr-2" href="{% url 'post-detail' post.id %}">{{ post.status }}</a>
               <br>
               <small class="text-muted">Task created: {{ post.date_posted|date:"F d, Y" }}</small>
               <br>
