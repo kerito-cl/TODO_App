@@ -1,9 +1,15 @@
 {% extends "todos/base.html" %}
 {% block content %}
-  {% for post in posts %}
+ 
+<a class="mr-2" href="{% url 'post-create' %}">
+      <button class="button-53" role="button">New Task</button>
+</a>
+        {% for post in posts %}
 
         {% if post.author == user %}
+
         <article class="media content-section">
+
           <div class="media-body">
             <div class="article-metadata">
               <a class="mr-2" href="#">{{ post.status }}</a>
@@ -12,10 +18,12 @@
               <br>
               <small class="text-muted">Task Updated: {{ post.date_updated|date:"F d, Y" }}</small>
             </div>
-            <h2><a class="article-title" href= "{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
-            <p class="article-content">{{ post.content }}</p>
+            <h2><a class="article-title" href= "{% url 'post-detail' post.id %}">{{ post.task }}</a></h2>
+            <p class="article-content">{{ post.description }}</p>
           </div>
         </article>
         {% endif %}
     {% endfor %}
 {% endblock content %}
+
+

@@ -5,8 +5,8 @@ from django.urls import reverse
 # Create your models here.
 
 class Todo(models.Model):
-    title = models.CharField(max_length=100)
-    content = models.TextField()
+    task = models.CharField(max_length=100)
+    description = models.TextField()
     date_posted = models.DateTimeField(default=timezone.now)
     date_updated = models.DateTimeField(default=timezone.now)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -17,7 +17,7 @@ class Todo(models.Model):
     status = models.CharField(max_length = 100, choices = status_choices,
             default="NotStarted")
     def __str__(self):
-        return self.title
+        return self.task
 
     def get_absolute_url(self):
         return reverse('todos-home')

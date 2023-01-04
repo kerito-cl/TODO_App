@@ -79,11 +79,10 @@ WSGI_APPLICATION = 'todoapp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': "railway",
-        'USER': "postgres",
-        'PASSWORD':"4EQqCTFGAubayTRQIhUg",
-        'HOST':"containers-us-west-104.railway.app",
-        'PORT':"7438"
+        'NAME': "TodoDB",
+        'USER': "bob",
+        'PASSWORD':"admin",
+        'HOST':"localhost"
     }
 }
 
@@ -123,9 +122,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
-STATIC_ROOT =os.path.join(BASE_DIR, 'staticfiles')
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 

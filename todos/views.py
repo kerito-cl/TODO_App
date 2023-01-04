@@ -28,7 +28,7 @@ class TodoListView(ListView):
     model = Todo
     template_name = 'todos/home.html'  # <app>/<model>_<viewtype>.html
     context_object_name = 'posts'
-    ordering = ['-date_posted']
+    ordering = ['-date_updated']
 
     @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):        
@@ -39,7 +39,7 @@ class TodoDetailView(DetailView):
 
 class TodoCreateView(LoginRequiredMixin, CreateView):
     model = Todo
-    fields = ['title', 'content','status']
+    fields = ['task', 'description','status']
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -47,7 +47,7 @@ class TodoCreateView(LoginRequiredMixin, CreateView):
 
 class TodoUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Todo
-    fields = ['status', 'title', 'content', 'date_updated']
+    fields = ['status', 'task', 'description', 'date_updated']
     mydate = datetime.now()
     formatedDate = mydate.strftime("%Y-%m-%d %H:%M:%S")
 
