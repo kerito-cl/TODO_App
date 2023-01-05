@@ -6,7 +6,7 @@ App used to maintain our day-to-day tasks or list everything that we have to do.
 First clone the repository:
 ```bash
 $ git clone https://github.com/kerito-cl/TODO_App
-``
+```
 Create a virtual environment to install dependencies in and activate it:
 ```bash
 $ virtualenv env
