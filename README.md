@@ -40,4 +40,3 @@ In settings.py :
 Fill the corresponding details for "NAME" , "USER", "PASSWORD", "HOST" and "PORT".
 
 
-## If you don't have Postgres installed 
