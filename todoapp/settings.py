@@ -79,14 +79,13 @@ WSGI_APPLICATION = 'todoapp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': "TodoDB",
-        'USER': "bob",
-        'PASSWORD':"admin",
-        'HOST':"localhost"
+        'NAME': "railway",
+        'USER': "postgres",
+        'PASSWORD':"4EQqCTFGAubayTRQIhUg",
+        'HOST':"containers-us-west-104.railway.app",
+        'PORT':"7438"
     }
 }
-
-
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 

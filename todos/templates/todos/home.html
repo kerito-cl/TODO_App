@@ -1,6 +1,7 @@
 {% extends "todos/base.html" %}
 {% block content %}
- 
+
+<div class="col-md-12 offset-md-1">
 <a class="mr-2" href="{% url 'post-create' %}">
       <button class="button-53" role="button">New Task</button>
 </a>
@@ -22,8 +23,11 @@
             <p class="article-content">{{ post.description }}</p>
           </div>
         </article>
+
         {% endif %}
     {% endfor %}
+
+</div>
 {% endblock content %}
 
 
