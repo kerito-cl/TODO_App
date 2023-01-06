@@ -47,7 +47,7 @@ class TodoCreateView(LoginRequiredMixin, CreateView):
 
 class TodoUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Todo
-    fields = ['status', 'task', 'description', 'date_updated']
+    fields = ['status', 'task', 'description']
     mydate = datetime.now()
     formatedDate = mydate.strftime("%Y-%m-%d %H:%M:%S")
 
